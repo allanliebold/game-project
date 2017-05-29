@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Project</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <div></div>
+    </header>
+
+    <main>
+      <section id="view">
+        <div id="image-box"></div>
+          <!-- room image displayed here -->
+        <div id="map-box">
+          <!-- map displayed and updated here -->
+        </div>
+      </section>
+
+      <section id="interface">
+        <div id="d-pad">
+          <button type="button" id="up-arrow" onclick="goNorth()">&uarr;</button>
+          <button type="button" id="down-arrow" onclick="goSouth()">&darr;</button>
+          <button type="button" id="left-arrow" onclick="goWest()">&larr;</button>
+          <button type="button" id="right-arrow" onclick="goEast()">&rarr;</button>
+          <button type="button" id="middle-button"></button>
+        </div>
+
+        <div id="text-box">
+          <!-- room description text displayed here -->
+        </div>
+      </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

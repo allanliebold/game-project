@@ -1,0 +1,141 @@
+header {
+  margin: 0 auto;
+  height: 60px;
+  width: 960px;
+  background: gray;
+}
+
+header div {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 960px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+#view {
+  height: 400px;
+  width: 960px;
+  background: black;
+  position: relative;
+}
+
+#map-box {
+  position: absolute;
+  height: 320px;
+  width: 400px;
+  padding: 40px 90px;
+  top: 0;
+  margin-left: 190px;
+  background: #a75;
+  box-shadow: 0 5px 20px #000;
+}
+
+#map-box ul {
+  margin-left: 20px;
+}
+
+#map-box li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: 4px;
+  background-color: #b86;
+  border-radius: 10%;
+}
+
+#map-box li span {
+  float: left;
+  font-family: sans-serif;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #ccc;
+  text-shadow: 0px 0px 10px #fff;
+}
+
+#map-box .visited {
+  background-color: #311;
+  box-shadow: 0 0 2pt #fff;
+}
+
+#image-box {
+
+}
+
+#interface {
+  height: 200px;
+  width: 960px;
+  background: gray;
+  padding-top: 12px;
+}
+
+#d-pad {
+  height: 125px;
+  width: 125px;
+  margin-top: 30px;
+  margin-left: 40px;
+  float: left;
+  position: relative;
+}
+
+button {
+  height: 40px;
+  width: 40px;
+  color: #444;
+  font-size: 30px;
+  background: black;
+  border: solid 2px #555;
+  position: absolute;
+  border-radius: 5%;
+}
+
+#up-arrow {
+  left: 42.5px;
+  border-bottom: none;
+}
+
+#left-arrow {
+  top: 42.5px;
+  border-right: none;
+}
+
+#right-arrow {
+  right: 0px;
+  top: 42.5px;
+  border-left: none;
+}
+
+#down-arrow {
+  bottom: 0px;
+  left: 42.5px;
+  border-top: none;
+}
+
+#middle-button {
+  left: 42.5px;
+  top: 42.5px;
+  border: none;
+  outline: solid 3px #000;
+}
+
+button:disabled {
+  color: #000;
+}
+
+#text-box {
+  float: left;
+  width: 550px;
+  height: 145px;
+  margin-left: 15px;
+  padding: 15px 25px;
+  border: dashed 3px gray;
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  font-family: monospace;
+}
