@@ -1,8 +1,10 @@
 'use strict';
 
 var player = {};
-var floor = ['','','','','','','','','','',''];
+var floor = [];
+var mapBox = document.getElementById('map-box');
 
+var startBtn = document.getElementById('start');
 var upArrow = document.getElementById('up-arrow');
 var downArrow = document.getElementById('down-arrow');
 var leftArrow = document.getElementById('left-arrow');
@@ -21,7 +23,6 @@ function Tile(locX, locY){
 }
 
 function mapGen(){
-  var mapBox = document.getElementById('map-box');
   var map = document.createElement('div');
   var tiles = [];
 
@@ -125,6 +126,18 @@ function goWest(){
 }
 
 function makeFloor(){
+  floor[42].makeRoom();
+  floor[42].desc = 'This is room 42';
+
+  floor[43].makeRoom();
+  floor[43].desc = 'This is room 43';
+
+  floor[53].makeRoom();
+  floor[53].desc = 'This is room 53';
+
+  floor[44].makeRoom();
+  floor[44].desc = 'This is room 44';
+
   floor[63].makeRoom();
   floor[63].desc = 'This is room 63';
 
@@ -134,27 +147,27 @@ function makeFloor(){
   floor[65].makeRoom();
   floor[65].desc = 'This is room 65';
 
-  floor[53].makeRoom();
-  floor[53].desc = 'This is room 53';
-
-  floor[42].makeRoom();
-  floor[42].desc = 'This is room 42';
-
-  floor[43].makeRoom();
-  floor[43].desc = 'This is room 43';
-
-  floor[44].makeRoom();
-  floor[44].desc = 'This is room 44';
+  floor[74].makeRoom();
+  floor[74].desc = 'You are standing in a dark tunnel.';
 }
 
 function startGame(){
+  startBtn.innerHTML = 'RESET';
+  startBtn.setAttribute('onClick', 'reset()');
+  floor = ['','','','','','','','','','',''];
   mapGen();
   makeFloor();
-  floor[74].makeRoom();
-  floor[74].desc = 'You are standing in a dark tunnel.';
   player.coord = 74;
   player.currentLoc = floor[player.coord];
   goToRoom();
 }
 
-startGame();
+function reset(){
+  console.log('Game Reset');
+  mapBox.innerHTML = '';
+  for(var i = 0; i < floor.length; i++){
+
+  }
+
+  startGame();
+}

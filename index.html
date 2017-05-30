@@ -8,7 +8,14 @@
 
   <body>
     <header>
-      <div></div>
+      <div>
+        <button type="button" id="start" onClick="startGame()">START</button>
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">4</button>
+        <button type="button">5</button>
+      </div>
     </header>
 
     <main>
@@ -22,11 +29,11 @@
 
       <section id="interface">
         <div id="d-pad">
-          <button type="button" id="up-arrow" onclick="goNorth()">&uarr;</button>
-          <button type="button" id="down-arrow" onclick="goSouth()">&darr;</button>
-          <button type="button" id="left-arrow" onclick="goWest()">&larr;</button>
-          <button type="button" id="right-arrow" onclick="goEast()">&rarr;</button>
-          <button type="button" id="middle-button"></button>
+          <button type="button" class="arrow" id="up-arrow" onclick="goNorth()">&uarr;</button>
+          <button type="button" class="arrow" id="down-arrow" onclick="goSouth()">&darr;</button>
+          <button type="button" class="arrow" id="left-arrow" onclick="goWest()">&larr;</button>
+          <button type="button" class="arrow" id="right-arrow" onclick="goEast()">&rarr;</button>
+          <button type="button" class="arrow" id="middle-button"></button>
         </div>
 
         <div id="text-box">

@@ -52,8 +52,8 @@ main {
   float: left;
   font-family: sans-serif;
   font-size: 30px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-top: 4px;
+  margin-left: 12px;
   color: #ccc;
   text-shadow: 0px 0px 10px #fff;
 }
@@ -83,7 +83,23 @@ main {
   position: relative;
 }
 
-button {
+header div {
+  margin-left: 200px;
+}
+
+header button {
+  height: 50px;
+  width: 90px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: monospace;
+  color: red;
+  background-color: #555;
+  border: 5px outset #333;
+}
+
+.arrow {
   height: 40px;
   width: 40px;
   color: #444;
@@ -93,6 +109,7 @@ button {
   position: absolute;
   border-radius: 5%;
 }
+
 
 #up-arrow {
   left: 42.5px;
