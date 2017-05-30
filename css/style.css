@@ -53,9 +53,22 @@ main {
   font-family: sans-serif;
   font-size: 30px;
   margin-top: 4px;
-  margin-left: 12px;
+  margin-left: 11px;
   color: #ccc;
   text-shadow: 0px 0px 10px #fff;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+/* Neon glow effect found on Codepen: https://codepen.io/FelixRilling/pen/qzfoc*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+  }
 }
 
 #map-box .visited {

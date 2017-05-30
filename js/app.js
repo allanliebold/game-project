@@ -1,8 +1,6 @@
 'use strict';
 
 var player = {};
-var floor = [];
-var mapBox = document.getElementById('map-box');
 
 var startBtn = document.getElementById('start');
 var upArrow = document.getElementById('up-arrow');
@@ -10,37 +8,6 @@ var downArrow = document.getElementById('down-arrow');
 var leftArrow = document.getElementById('left-arrow');
 var rightArrow = document.getElementById('right-arrow');
 
-function Tile(locX, locY){
-  this.locX = locX;
-  this.locY = locY;
-  this.desc = '';
-  this.isRoom = false;
-  this.makeRoom = function(){
-    this.isRoom = true;
-  };
-  this.visited = false;
-  floor.push(this);
-}
-
-function mapGen(){
-  var map = document.createElement('div');
-  var tiles = [];
-
-  for(var row = 1; row < 9; row++){
-    tiles.push('<ul>');
-    for(var col = 1; col < 9; col++){
-      tiles.push('<li id="' + row + col + '"></li>');
-      new Tile(row, col);
-    }
-    for(var f = 0; f < 2; f++){
-      floor.push('');
-    }
-    tiles.push('</ul>');
-  }
-  map.innerHTML = tiles.join('');
-  mapBox.appendChild(map);
-  console.log(floor);
-}
 
 function displayText(){
   var textBox = document.getElementById('text-box');
@@ -49,11 +16,10 @@ function displayText(){
 
 function goToRoom(){
   player.currentLoc = floor[player.coord];
-  console.log('X: ', player.currentLoc.locX);
-  console.log('Y: ', player.currentLoc.locY);
 
   displayText();
   checkTiles();
+
   floor[player.coord].visited = true;
 
   var current = updateCurrent();
@@ -90,7 +56,6 @@ function checkTiles(){
   } else {
     leftArrow.disabled = true;
   }
-
 }
 
 function updateCurrent(){
@@ -125,32 +90,6 @@ function goWest(){
   goToRoom();
 }
 
-function makeFloor(){
-  floor[42].makeRoom();
-  floor[42].desc = 'This is room 42';
-
-  floor[43].makeRoom();
-  floor[43].desc = 'This is room 43';
-
-  floor[53].makeRoom();
-  floor[53].desc = 'This is room 53';
-
-  floor[44].makeRoom();
-  floor[44].desc = 'This is room 44';
-
-  floor[63].makeRoom();
-  floor[63].desc = 'This is room 63';
-
-  floor[64].makeRoom();
-  floor[64].desc = 'You are in a narrow part of the tunnel.';
-
-  floor[65].makeRoom();
-  floor[65].desc = 'This is room 65';
-
-  floor[74].makeRoom();
-  floor[74].desc = 'You are standing in a dark tunnel.';
-}
-
 function startGame(){
   startBtn.innerHTML = 'RESET';
   startBtn.setAttribute('onClick', 'reset()');
@@ -163,11 +102,6 @@ function startGame(){
 }
 
 function reset(){
-  console.log('Game Reset');
   mapBox.innerHTML = '';
-  for(var i = 0; i < floor.length; i++){
-
-  }
-
   startGame();
 }
