@@ -105,9 +105,9 @@ header button {
   width: 90px;
   margin-top: 5px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   font-family: monospace;
-  color: red;
+  color: black;
   background-color: #555;
   border: 5px outset #333;
 }
